@@ -7,5 +7,5 @@ $objConexion = new conexion();
 $objCategoria = new categoria();
 
 $conexion = $objConexion->conectar();
-echo $objCategoria->registrar($conexion,$_POST['Nombre'],$_POST['Descripcion'],$_POST['Codigo']);
-echo "<a href='../registrocategoria.html'><button>Regresar</button></a>";
+echo $objCategoria->eliminar($conexion, $_GET['id']);
+echo "<center><a href ='../consultarcategoria.php'><button>Volver</button></a></center>";
